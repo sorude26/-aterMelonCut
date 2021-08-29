@@ -274,6 +274,7 @@ namespace BLINDED_AM_ME
 
             // 元のオブジェクトを左側のオブジェクトに
             victim.name = "left side";
+            victim.tag = "Fruits";
             victim.GetComponent<MeshFilter>().mesh = left_HalfMesh;
 
 
@@ -284,9 +285,10 @@ namespace BLINDED_AM_ME
             rightSideObj.transform.position = victim.transform.position;
             rightSideObj.transform.rotation = victim.transform.rotation;
             rightSideObj.transform.localScale = victim.transform.localScale;
-            rightSideObj.tag = victim.tag;
+            rightSideObj.tag = "Fruits";
             rightSideObj.GetComponent<MeshFilter>().mesh = right_HalfMesh;
             rightSideObj.AddComponent<GameAreaObject>();
+            rightSideObj.AddComponent<Rigidbody>();
             rightSideObj.AddComponent<SphereCollider>();
             // assign mats
             // 新規生成したマテリアルリストをそれぞれのオブジェクトに適用する

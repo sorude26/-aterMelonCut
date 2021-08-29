@@ -8,6 +8,7 @@ TagManager:
   - CutArea
   - GameArea
   - Water
+  - Fruits
   layers:
   - Default
   - TransparentFX

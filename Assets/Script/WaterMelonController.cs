@@ -3,34 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WaterMelonController : MonoBehaviour
-{ 
-
-    private void OnCollisionEnter(Collision collision)
+{
+    [SerializeField] GameObject m_halo;
+    private void Start()
     {
-        if (collision.gameObject.CompareTag("CutArea")) gameObject.tag = "Cut";
-    }
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("CutArea")) gameObject.tag = "Cut";
+        m_halo.SetActive(false);
+        StartCoroutine("SetHalo");
     }
 
-    private void OnCollisionExit(Collision collision)
+    IEnumerator SetHalo()
     {
-        if (collision.gameObject.CompareTag("CutArea")) gameObject.tag = "Water";
+        while (true)
+        {
+            if (gameObject.CompareTag("Fruits")) m_halo.SetActive(false);
+            yield return new WaitForSeconds(0.01f);
+        }
     }
-
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("CutArea")) gameObject.tag = "Cut";
+        if (gameObject.CompareTag("Fruits")) return;
+        if (other.CompareTag("CutArea"))
+        {
+            gameObject.tag = "Cut";
+            m_halo.SetActive(true);
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("CutArea")) gameObject.tag = "Cut";
+        if (gameObject.CompareTag("Fruits")) return;
+        if (other.CompareTag("CutArea"))
+        {
+            gameObject.tag = "Cut";
+            m_halo.SetActive(true);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("CutArea")) gameObject.tag = "Water";
+        if (gameObject.CompareTag("Fruits")) return;
+        if (other.CompareTag("CutArea"))
+        {
+            gameObject.tag = "Water";
+            m_halo.SetActive(false);
+        }
     }
 }
