@@ -170,6 +170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_halo: {fileID: 1066375412509855778}
   m_score: 1
+  m_plusTime: 0
+  m_plusText: {fileID: 0}
 --- !u!114 &3404351496144547861
 MonoBehaviour:
   m_ObjectHideFlags: 0

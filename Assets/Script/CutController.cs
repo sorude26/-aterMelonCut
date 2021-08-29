@@ -38,7 +38,7 @@ public class CutController : MonoBehaviour
 
     public void CutObject(bool cutMode)
     {
-        Debug.Log(m_cutplane.transform.rotation.z);
+        //Debug.Log(m_cutplane.transform.rotation.z);
         Vector3 cut = Vector3.zero;
         if (cutMode)
         {
@@ -54,7 +54,10 @@ public class CutController : MonoBehaviour
         if (m_cutObjects == null) return;
         foreach (var item in m_cutObjects)
         {
-            if(item.name.Contains("Meron")) cutObjects = MeshCut.Cut(item, item.transform.position, cut, m_cutMaterial[1]);
+            if (item.name.Contains("Meron"))
+            { 
+                cutObjects = MeshCut.Cut(item, item.transform.position, cut, m_cutMaterial[1]); 
+            }
             else
             {
                 cutObjects = MeshCut.Cut(item, item.transform.position, cut, m_cutMaterial[0]);
