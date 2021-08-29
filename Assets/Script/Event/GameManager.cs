@@ -52,9 +52,4 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(4);
         m_inGame.OnNext(Unit.Default);
     }
-
-    void ScorePlus()
-    {
-        
-    }
 }
