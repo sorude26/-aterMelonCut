@@ -13,13 +13,13 @@ public class CountDown : MonoBehaviour
     private void Awake()
     {
         m_gameManager.GameStart.Subscribe(_ => StartCoroutine(GameStartCount())).AddTo(this);
+        m_gameManager.GameEnd.Subscribe(_ => GameEnd());
     }
     // Start is called before the first frame update
     void Start()
     {
         
     }
-
 
     IEnumerator GameStartCount()
     {
@@ -39,4 +39,9 @@ public class CountDown : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
+    void GameEnd()
+    {
+        this.gameObject.SetActive(true);
+        m_countDown.text = "End";
+    }
 }
