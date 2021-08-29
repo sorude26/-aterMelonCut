@@ -76,14 +76,14 @@ public class CutController : MonoBehaviour
             }
             if (!item.TryGetComponent(out MeshCollider u))
             {
-                u = item.AddComponent<MeshCollider>();
-                u.convex = true;
+                //u = item.AddComponent<MeshCollider>();
+                //u.convex = true;
             }
             else
             {
-                Destroy(u);
-                var v = item.AddComponent<MeshCollider>();
-                v.convex = true;
+                //Destroy(u);
+                //var v = item.AddComponent<MeshCollider>();
+                //v.convex = true;
             }
             //rb.AddForce(new Vector3((lineRenderer.GetPosition(1) - lineRenderer.GetPosition(0)).x, (lineRenderer.GetPosition(1) - lineRenderer.GetPosition(0)).y, 0).normalized * m_cutPower,ForceMode.Force);
         }
