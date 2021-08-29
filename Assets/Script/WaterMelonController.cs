@@ -5,6 +5,12 @@ using UnityEngine;
 public class WaterMelonController : MonoBehaviour
 {
     [SerializeField] GameObject m_halo;
+    [SerializeField] int m_score = 100;
+    public bool IsScored = false;
+
+    private void Awake()
+    {
+    }
     private void Start()
     {
         m_halo.SetActive(false);
@@ -15,7 +21,10 @@ public class WaterMelonController : MonoBehaviour
     {
         while (true)
         {
-            if (gameObject.CompareTag("Fruits")) m_halo.SetActive(false);
+            if (gameObject.CompareTag("Fruits"))
+            {
+                m_halo.SetActive(false);
+            }
             yield return new WaitForSeconds(0.01f);
         }
     }
