@@ -9,11 +9,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     [SerializeField] int m_gameTime;
+    Subject<Unit> m_title = new Subject<Unit>();
     Subject<Unit> m_gameStart = new Subject<Unit>();
     Subject<Unit> m_inGame = new Subject<Unit>();
     Subject<Unit> m_gameEnd = new Subject<Unit>();
     public ReactiveProperty<int> Point = new ReactiveProperty<int>(0);
     public ReactiveProperty<int> GameTime = new ReactiveProperty<int>();
+    //public IObservable<Unit> Title => m_title;
     public IObservable<Unit> GameStart => m_gameStart;
     public IObservable<Unit> InGame => m_inGame;
     public IObservable<Unit> GameEnd => m_gameEnd;
@@ -54,6 +56,4 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(4);
         m_inGame.OnNext(Unit.Default);
     }
-
-    
 }
