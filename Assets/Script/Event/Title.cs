@@ -19,7 +19,7 @@ public class Title : MonoBehaviour
         float a = 0;
         while (a < 0.9)
         {
-            a += 0.002f;
+            a += 0.004f;
             image.color = new Color(0, 0, 0, a);
             yield return new WaitForEndOfFrame();
         }
