@@ -745,6 +745,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 144087302}
     m_Modifications:
+    - target: {fileID: 3714606468892830262, guid: ed9c16b570ebabd419cb500094492fc0,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714606468892830262, guid: ed9c16b570ebabd419cb500094492fc0,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0.00091552734
+      objectReference: {fileID: 0}
     - target: {fileID: 3714606469556056272, guid: ed9c16b570ebabd419cb500094492fc0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -850,6 +860,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3714606469556056273, guid: ed9c16b570ebabd419cb500094492fc0,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3714606469556056275, guid: ed9c16b570ebabd419cb500094492fc0,
         type: 3}
       propertyPath: m_Name
@@ -928,12 +943,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SUIKAGenerator
       objectReference: {fileID: 0}
-    - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
-        type: 3}
-      propertyPath: m_spawnObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 1281298173979551455, guid: 4c04eccf6661b2b4986a1239c1d12849,
-        type: 3}
     - target: {fileID: 2644160383529914187, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -988,21 +997,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2644160385154369708, guid: 5eaccf1b0776eda44b8811708b5c074b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2644160385154369708, guid: 5eaccf1b0776eda44b8811708b5c074b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2644160385154369708, guid: 5eaccf1b0776eda44b8811708b5c074b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eaccf1b0776eda44b8811708b5c074b, type: 3}
