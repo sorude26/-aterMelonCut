@@ -38,7 +38,6 @@ public class CutController : MonoBehaviour
 
     public void CutObject(bool cutMode)
     {
-        GameManager.Instance.Point.Value += 100;
         Debug.Log(m_cutplane.transform.rotation.z);
         Vector3 cut = Vector3.zero;
         if (cutMode)
@@ -59,6 +58,10 @@ public class CutController : MonoBehaviour
             Instantiate(m_effect, item.transform.position, item.transform.rotation);
         }
         if (cutObjects == null) return;
+        else
+        {
+            GameManager.Instance.Point.Value ++;
+        }
     }
 
     public void OnBeginDrag()
