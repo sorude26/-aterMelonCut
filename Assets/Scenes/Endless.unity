@@ -563,17 +563,17 @@ PrefabInstance:
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
       propertyPath: m_spawnSpeed.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
       propertyPath: m_spawnObjects.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
       propertyPath: m_spawnTime.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
@@ -589,7 +589,7 @@ PrefabInstance:
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
       propertyPath: m_spawnSpeed.Array.data[1]
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
@@ -639,7 +639,7 @@ PrefabInstance:
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
       propertyPath: m_spawnTime.Array.data[0]
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
@@ -652,6 +652,28 @@ PrefabInstance:
       propertyPath: m_spawnTime.Array.data[1]
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
+        type: 3}
+      propertyPath: m_spawnTime.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
+        type: 3}
+      propertyPath: m_spawnTime.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
+        type: 3}
+      propertyPath: m_spawnObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 6007710755525772619, guid: fdfa4879ea624b848970e74f6d55c22f,
+        type: 3}
+    - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
+        type: 3}
+      propertyPath: m_spawnObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 8785762258764192572, guid: e6ee076d8c9157542b17c06c15670d1f,
+        type: 3}
     - target: {fileID: 2644160383529914187, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
       propertyPath: m_LocalPosition.x
