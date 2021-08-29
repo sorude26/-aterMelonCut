@@ -127,6 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_halo: {fileID: 5502059768138462134}
   m_score: 2
+  m_plusTime: 5
+  m_text: {fileID: 6588639214590141354, guid: a6ebb18185c029a429e3a3f497db0969, type: 3}
 --- !u!114 &7901872698748556161
 MonoBehaviour:
   m_ObjectHideFlags: 0
