@@ -68,7 +68,7 @@ public class CutController : MonoBehaviour
             {
                 item.TryGetComponent(out Rigidbody rb2);
                 rb2.useGravity = true;
-                Destroy(item.GetComponent<TestMove>());
+                //Destroy(item.GetComponent<TestMove>());
             }
             if (item.TryGetComponent(out BoxCollider col))
             {
