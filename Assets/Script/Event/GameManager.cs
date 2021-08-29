@@ -7,6 +7,7 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
     [SerializeField] int m_gameTime;
     Subject<Unit> m_gameStart = new Subject<Unit>();
     Subject<Unit> m_inGame = new Subject<Unit>();
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        Instance = this;
         m_gameStart.Subscribe(_ => StartCoroutine(CountDown())).AddTo(this);
         m_inGame.Subscribe(_ => StartCoroutine(GameTimer())).AddTo(this);
         m_inGame.Subscribe( _ =>
