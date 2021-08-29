@@ -12,7 +12,7 @@ public class CutController : MonoBehaviour
     [SerializeField] private GameObject[] m_cutObjects = null;
     [SerializeField] private GameObject m_effect = null;
     [SerializeField] private GameObject m_cutplane = null;
-    [SerializeField] private Material m_cutMaterial = null;
+    [SerializeField] private Material[] m_cutMaterial = null;
     [SerializeField] private float m_cutPower = 3f;
     [SerializeField]LineRenderer lineRenderer;
     Vector3 worldPos;
@@ -54,7 +54,11 @@ public class CutController : MonoBehaviour
         if (m_cutObjects == null) return;
         foreach (var item in m_cutObjects)
         {
-            cutObjects = MeshCut.Cut(item, item.transform.position, cut, m_cutMaterial);
+            if(item.name.Contains("Meron")) cutObjects = MeshCut.Cut(item, item.transform.position, cut, m_cutMaterial[1]);
+            else
+            {
+                cutObjects = MeshCut.Cut(item, item.transform.position, cut, m_cutMaterial[0]);
+            }
             Instantiate(m_effect, item.transform.position, item.transform.rotation);
         }
     }

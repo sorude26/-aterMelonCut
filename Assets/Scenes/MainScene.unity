@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d48a7646f5d0547e889733d84b50cb9f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -178,7 +178,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5e6dd542029a84947927c14503109a71, type: 3}
     m_FontSize: 62
     m_FontStyle: 1
     m_BestFit: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5e6dd542029a84947927c14503109a71, type: 3}
     m_FontSize: 42
     m_FontStyle: 1
     m_BestFit: 0
@@ -531,7 +531,17 @@ PrefabInstance:
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
       propertyPath: m_spawnSpeed.Array.size
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
+        type: 3}
+      propertyPath: m_spawnObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
+        type: 3}
+      propertyPath: m_spawnTime.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
@@ -547,7 +557,7 @@ PrefabInstance:
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
       propertyPath: m_spawnSpeed.Array.data[1]
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
@@ -598,6 +608,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_spawnTime.Array.data[0]
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
+        type: 3}
+      propertyPath: m_spawnObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1281298173979551455, guid: 34114b9e4d850aa4894754ef50e491f9,
+        type: 3}
+    - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
+        type: 3}
+      propertyPath: m_spawnTime.Array.data[1]
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2644160383529914187, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
@@ -663,6 +684,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2079884608}
     m_Modifications:
+    - target: {fileID: 3714606468892830262, guid: ed9c16b570ebabd419cb500094492fc0,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714606468892830262, guid: ed9c16b570ebabd419cb500094492fc0,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0.00440979
+      objectReference: {fileID: 0}
     - target: {fileID: 3714606469556056272, guid: ed9c16b570ebabd419cb500094492fc0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -830,7 +861,9 @@ MonoBehaviour:
   m_effect: {fileID: 6588639214590141354, guid: 11c9107f94b74fe44bcf5834b29f08d8,
     type: 3}
   m_cutplane: {fileID: 2143794487}
-  m_cutMaterial: {fileID: 2100000, guid: dfc90d6de2ed51c40b02e0906e8cf13f, type: 2}
+  m_cutMaterial:
+  - {fileID: 2100000, guid: dfc90d6de2ed51c40b02e0906e8cf13f, type: 2}
+  - {fileID: 2100000, guid: 27bb3318a24208444aa71a8431f2c0ad, type: 2}
   m_cutPower: 3
   lineRenderer: {fileID: 620171729}
   m_cutMode: 0
@@ -1108,7 +1141,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5e6dd542029a84947927c14503109a71, type: 3}
     m_FontSize: 110
     m_FontStyle: 1
     m_BestFit: 0
@@ -1432,7 +1465,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5e6dd542029a84947927c14503109a71, type: 3}
     m_FontSize: 42
     m_FontStyle: 1
     m_BestFit: 0
