@@ -57,11 +57,6 @@ public class CutController : MonoBehaviour
             cutObjects = MeshCut.Cut(item, item.transform.position, cut, m_cutMaterial);
             Instantiate(m_effect, item.transform.position, item.transform.rotation);
         }
-        if (cutObjects == null) return;
-        else
-        {
-            GameManager.Instance.Point.Value ++;
-        }
     }
 
     public void OnBeginDrag()

@@ -6,7 +6,7 @@ public class WaterMelonController : MonoBehaviour
 {
     [SerializeField] GameObject m_halo;
     [SerializeField] int m_score = 100;
-    public bool IsScored = false;
+    bool IsScored = false;
 
     private void Awake()
     {
@@ -24,6 +24,11 @@ public class WaterMelonController : MonoBehaviour
             if (gameObject.CompareTag("Fruits"))
             {
                 m_halo.SetActive(false);
+                if (!IsScored)
+                {
+                    GameManager.Instance.Point.Value++;
+                    IsScored = true;
+                }
             }
             yield return new WaitForSeconds(0.01f);
         }
