@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1546233825}
-  m_scene: MainScence
+  m_scene: MainScene
 --- !u!114 &1562000869
 MonoBehaviour:
   m_ObjectHideFlags: 0
