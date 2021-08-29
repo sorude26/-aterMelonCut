@@ -5,7 +5,7 @@ using UnityEngine;
 public class WaterMelonController : MonoBehaviour
 {
     [SerializeField] GameObject m_halo;
-    [SerializeField] int m_score = 100;
+    [SerializeField] int m_score = 1;
     bool IsScored = false;
 
     private void Awake()
@@ -26,7 +26,7 @@ public class WaterMelonController : MonoBehaviour
                 m_halo.SetActive(false);
                 if (!IsScored)
                 {
-                    GameManager.Instance.Point.Value++;
+                    GameManager.Instance.Point.Value+= m_score;
                     IsScored = true;
                 }
             }
