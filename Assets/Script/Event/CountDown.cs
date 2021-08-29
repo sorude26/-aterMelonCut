@@ -13,7 +13,7 @@ public class CountDown : MonoBehaviour
     private void Awake()
     {
         m_gameManager.GameStart.Subscribe(_ => StartCoroutine(GameStartCount())).AddTo(this);
-        m_gameManager.GameEnd.Subscribe(_ => GameEnd());
+        m_gameManager.GameEnd.Subscribe(_ => GameEnd()).AddTo(this);
     }
 
     IEnumerator GameStartCount()
