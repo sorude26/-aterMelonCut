@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3714606468892830665}
   - component: {fileID: 3714606468892830262}
-  - component: {fileID: 3714606468892830263}
+  - component: {fileID: 7979436512857787271}
   m_Layer: 5
   m_Name: GameObject
   m_TagString: Untagged
@@ -134,7 +134,7 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &3714606468892830263
+--- !u!114 &7979436512857787271
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,15 +143,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3714606468892830664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8be5536e176a194a861df2fb9ea8d72, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d04de858586412439cdc1f4f996aaa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_cutObjects: []
+  m_effect: {fileID: 0}
   m_cutplane: {fileID: 0}
-  m_cutMaterial: {fileID: 2100000, guid: d615e3c87d677e54db5f328301abf3fd, type: 2}
+  m_cutMaterial: {fileID: 0}
   m_cutPower: 3
-  lineRenderer: {fileID: 3714606468892830262}
-  m_cutMode: 0
+  lineRenderer: {fileID: 0}
+  m_cutMode: 1
 --- !u!1 &3714606469556056275
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +246,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 3714606468892830263}
+        - m_Target: {fileID: 7979436512857787271}
           m_MethodName: OnBeginDrag
           m_Mode: 1
           m_Arguments:
@@ -260,7 +261,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 3714606468892830263}
+        - m_Target: {fileID: 7979436512857787271}
           m_MethodName: OnEndDrag
           m_Mode: 1
           m_Arguments:

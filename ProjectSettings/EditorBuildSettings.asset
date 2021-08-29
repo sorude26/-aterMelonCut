@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Soezima.unity
     guid: 94b20d1675b87c34b9d9dd36e578422c
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: cadf5d249b387514d9ac855953b9bcae
   m_configObjects: {}

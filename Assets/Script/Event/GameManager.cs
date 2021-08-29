@@ -25,10 +25,10 @@ public class GameManager : MonoBehaviour
         Instance = this;
         m_gameStart.Subscribe(_ => StartCoroutine(CountDown())).AddTo(this);
         m_inGame.Subscribe(_ => StartCoroutine(GameTimer())).AddTo(this);
-        m_inGame.Subscribe( _ =>
-        { 
-            input = this.UpdateAsObservable().Where(_2 => Input.GetMouseButtonDown(0)).Subscribe(_2 => Point.Value += 100);
-        }).AddTo(this);
+       // m_inGame.Subscribe(_ =>
+       //{
+       //    input = this.UpdateAsObservable().Where(_2 => Input.GetMouseButtonDown(0)).Subscribe(_2 => Point.Value += 100);
+       //}).AddTo(this);
     }
     void Start()
     {
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
             //Point.Value += 100;
             yield return new WaitForSeconds(1);
         }
-        input.Dispose();
+        //input.Dispose();
         m_gameEnd.OnNext(Unit.Default);
         
     }

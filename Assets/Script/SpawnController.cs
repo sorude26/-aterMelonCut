@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
 
 public class SpawnController : MonoBehaviour
 {
+    [SerializeField] GameManager m_gameManager;
     [SerializeField] float[] m_spawnSpeed;
     [SerializeField] float[] m_spawnTime;
     [SerializeField] GameObject[] m_spawnObjects;
@@ -12,9 +14,15 @@ public class SpawnController : MonoBehaviour
     float[] m_timers;
     bool m_spawn = false;
     int m_count = 0;
+
+    private void Awake()
+    {
+        m_gameManager.InGame.Subscribe(_ => StartSpawn());
+        m_gameManager.GameEnd.Subscribe(_ => StopSpawn());
+    }
     void Start()
     {
-        StartSpawn();
+        //StartSpawn();
         m_timers = new float[m_spawnSpeed.Length];
         m_allSpawnSpeed = new float[m_spawnSpeed.Length];
         for (int i = 0; i < m_allSpawnSpeed.Length; i++)
