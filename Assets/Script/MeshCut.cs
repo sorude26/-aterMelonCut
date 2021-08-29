@@ -286,7 +286,8 @@ namespace BLINDED_AM_ME
             rightSideObj.transform.localScale = victim.transform.localScale;
             rightSideObj.tag = victim.tag;
             rightSideObj.GetComponent<MeshFilter>().mesh = right_HalfMesh;
-
+            rightSideObj.AddComponent<GameAreaObject>();
+            rightSideObj.AddComponent<SphereCollider>();
             // assign mats
             // 新規生成したマテリアルリストをそれぞれのオブジェクトに適用する
             leftSideObj.GetComponent<MeshRenderer>().materials = mats;
