@@ -51,25 +51,4 @@ public class FollowMouse : MonoBehaviour
         m_cutMode = false;
         m_cutArea.SetActive(false);
     }
-    void Update()
-    {
-        //if (Input.GetButton("Fire1"))
-        //{
-        //    if (!m_cutMode)
-        //    {
-        //        m_cutMode = true;
-        //        m_cutArea.SetActive(true);
-        //    }
-        //    return;
-        //}
-        //position = Input.mousePosition;
-        //position.z = 10f;
-        //screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(position);
-        //gameObject.transform.position = screenToWorldPointPosition;
-        //if (m_cutMode)
-        //{
-        //    m_cutMode = false;
-        //    m_cutArea.SetActive(false);
-        //}
-    }
 }
