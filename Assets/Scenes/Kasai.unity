@@ -873,6 +873,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_cutObjects: []
+  m_effect: {fileID: 6588639214590141354, guid: 11c9107f94b74fe44bcf5834b29f08d8,
+    type: 3}
   m_cutplane: {fileID: 1017128616}
   m_cutMaterial: {fileID: 2100000, guid: dfc90d6de2ed51c40b02e0906e8cf13f, type: 2}
   m_cutPower: 3

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CutController : MonoBehaviour
 {
     [SerializeField] private GameObject[] m_cutObjects = null;
+    [SerializeField] private GameObject m_effect = null;
     [SerializeField] private GameObject m_cutplane = null;
     [SerializeField] private Material m_cutMaterial = null;
     [SerializeField] private float m_cutPower = 3f;
@@ -50,6 +51,7 @@ public class CutController : MonoBehaviour
         foreach (var item in m_cutObjects)
         {
             cutObjects = MeshCut.Cut(item, item.transform.position, cut, m_cutMaterial);
+            Instantiate(m_effect, item.transform.position, item.transform.rotation);
         }
         if (cutObjects == null) return;
     }
