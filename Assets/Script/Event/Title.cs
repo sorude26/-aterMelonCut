@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Title : MonoBehaviour
 {
     [SerializeField] Image image;
+    [SerializeField] string m_scene;
 
     public void Titlechange()
     {
@@ -23,6 +24,6 @@ public class Title : MonoBehaviour
             image.color = new Color(0, 0, 0, a);
             yield return new WaitForEndOfFrame();
         }
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(m_scene);
     }
 }

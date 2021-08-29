@@ -607,7 +607,7 @@ PrefabInstance:
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
       propertyPath: m_spawnTime.Array.data[0]
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2644160383529914186, guid: 5eaccf1b0776eda44b8811708b5c074b,
         type: 3}
@@ -1106,7 +1106,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -186, y: -140}
+  m_AnchoredPosition: {x: -475, y: 297}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1012306260
@@ -1123,6 +1123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_gameManager: {fileID: 1269608865}
   m_sceneName: Title
+  m_isEndless: 1
 --- !u!114 &1012306261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1907,7 +1908,7 @@ PrefabInstance:
     - target: {fileID: 3441553447998145186, guid: c65cfbbdd305a8d4ea067b131f7f169f,
         type: 3}
       propertyPath: m_gameTime
-      value: 20
+      value: 10000000
       objectReference: {fileID: 0}
     - target: {fileID: 3441553447998145187, guid: c65cfbbdd305a8d4ea067b131f7f169f,
         type: 3}
