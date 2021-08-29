@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using BLINDED_AM_ME;
 using UnityEngine.UI;
+using UniRx;
+using UniRx.Triggers;
+using System;
 
 public class CutController : MonoBehaviour
 {
@@ -18,6 +21,7 @@ public class CutController : MonoBehaviour
     GameObject[] cutObjects;
     bool IsFirst = true;
     Vector3[] col;
+    
     // Start is called before the first frame update
     void Start()
     {
