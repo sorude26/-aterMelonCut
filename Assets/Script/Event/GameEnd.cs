@@ -10,9 +10,11 @@ public class GameEnd : MonoBehaviour
 {
     [SerializeField] GameManager m_gameManager;
     [SerializeField] string m_sceneName;
+    [SerializeField]bool m_isEndless;
     private void Awake()
     {
         m_gameManager.GameEnd.Subscribe(_ => End()).AddTo(this);
+        if (!m_isEndless)
         this.gameObject.SetActive(false);
     }
 
