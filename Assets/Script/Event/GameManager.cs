@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     public IObservable<Unit> GameStart => m_gameStart;
     public IObservable<Unit> InGame => m_inGame;
     public IObservable<Unit> GameEnd => m_gameEnd;
-
     IDisposable input;
     // Start is called before the first frame update
     private void Awake()
@@ -48,7 +47,7 @@ public class GameManager : MonoBehaviour
         }
         //input.Dispose();
         m_gameEnd.OnNext(Unit.Default);
-        
+        SoundManager.Instance.PlaySE(SEType.Whistle);
     }
 
     IEnumerator CountDown()
