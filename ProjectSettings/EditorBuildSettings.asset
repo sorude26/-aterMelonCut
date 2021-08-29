@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Soezima.unity
+    guid: 94b20d1675b87c34b9d9dd36e578422c
   m_configObjects: {}
