@@ -25,9 +25,11 @@ public class CountDown : MonoBehaviour
             if (count == 0)
             {
                 m_countDown.text = "Start";
+                SoundManager.Instance.PlaySE(SEType.Whistle);
                 yield return new WaitForSeconds(1);
                 break;
             }
+            SoundManager.Instance.PlaySE(SEType.Count);
             m_countDown.text = count.ToString();
             yield return new WaitForSeconds(1);
         }
