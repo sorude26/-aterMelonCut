@@ -15,11 +15,6 @@ public class CountDown : MonoBehaviour
         m_gameManager.GameStart.Subscribe(_ => StartCoroutine(GameStartCount())).AddTo(this);
         m_gameManager.GameEnd.Subscribe(_ => GameEnd());
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     IEnumerator GameStartCount()
     {

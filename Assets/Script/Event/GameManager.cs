@@ -16,13 +16,17 @@ public class GameManager : MonoBehaviour
     public IObservable<Unit> GameStart => m_gameStart;
     public IObservable<Unit> InGame => m_inGame;
     public IObservable<Unit> GameEnd => m_gameEnd;
-    //IObservable<Unit> GamePlay => this.UpdateAsObservable();
+
+    IDisposable input;
     // Start is called before the first frame update
     private void Awake()
     {
         m_gameStart.Subscribe(_ => StartCoroutine(CountDown())).AddTo(this);
         m_inGame.Subscribe(_ => StartCoroutine(GameTimer())).AddTo(this);
-        
+        m_inGame.Subscribe( _ =>
+        { 
+            input = this.UpdateAsObservable().Where(_2 => Input.GetMouseButtonDown(0)).Subscribe(_2 => Point.Value += 100);
+        }).AddTo(this);
     }
     void Start()
     {
@@ -30,21 +34,17 @@ public class GameManager : MonoBehaviour
         m_gameStart.OnNext(Unit.Default);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     IEnumerator GameTimer()
     { 
         while (GameTime.Value > 0)
         {
             GameTime.Value--;
-            Point.Value += 100;
+            //Point.Value += 100;
             yield return new WaitForSeconds(1);
         }
+        input.Dispose();
         m_gameEnd.OnNext(Unit.Default);
+        
     }
 
     IEnumerator CountDown()
@@ -52,4 +52,6 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(4);
         m_inGame.OnNext(Unit.Default);
     }
+
+    
 }
