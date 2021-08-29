@@ -36,6 +36,7 @@ public class FollowMouse : MonoBehaviour
                 {
                     m_cutMode = false;
                     m_cutArea.SetActive(false);
+                    SoundManager.Instance.PlaySE(SEType.Cut);
                 }
             });
         });
