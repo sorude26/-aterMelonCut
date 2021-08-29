@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class Restart : MonoBehaviour
 {
     [SerializeField] GameManager m_gameManager;
+    [SerializeField] string m_sceneName;
     private void Awake()
     {
         m_gameManager.GameEnd.Subscribe(_ => End()).AddTo(this);
@@ -16,7 +17,7 @@ public class Restart : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("Soezima");
+        SceneManager.LoadScene(m_sceneName);
     }
 
     void End()

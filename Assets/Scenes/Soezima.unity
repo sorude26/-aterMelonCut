@@ -770,6 +770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_gameManager: {fileID: 1269608865}
+  m_sceneName: Soezima
 --- !u!114 &1269608865 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3441553447998145186, guid: c65cfbbdd305a8d4ea067b131f7f169f,
